@@ -1,0 +1,27 @@
+# Stream Anything Server configuration.
+# Copy this file to config.toml and edit it.
+# Write Windows paths with forward slashes ("D:/Movies") or in single quotes ('D:\Movies').
+# "D:\Movies" (backslashes inside double quotes) is an error: TOML reads \ as an escape there.
+
+[server]
+# Shown in the Stream Anything app and on the browse page. Defaults to this computer's name.
+name = "Living Room PC"
+# The port the server listens on. Allow it through the firewall on *private* networks only.
+port = 8090
+
+# Each [[libraries]] block shares one folder (and everything inside it). Add as many as you like —
+# this is how files scattered across drives become reachable, without sharing a whole drive.
+# The name appears in links, so keep it short: letters, digits, spaces, '.', '_' or '-'.
+
+[[libraries]]
+name = "Movies"
+path = "D:/Movies"
+
+[[libraries]]
+name = "Downloads"
+path = "C:/Users/Alex/Downloads"
+
+[media]
+# Only video files are listed and served. Common formats are built in
+# (mp4, m4v, mkv, webm, mov, avi, wmv, ts, m2ts, mpg, mpeg, 3gp, flv, ogv); add others here.
+extra_video_extensions = []
